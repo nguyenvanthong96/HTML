@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    margin-left: -40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+div.thumbnail {
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 42px);
+    margin-left: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 12.5px 2.5px lightgray;
+}
+
+.thumbnail .img-new {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.content-top {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.content-top h3 {
+    font-weight: 500;
+    flex: 1;
+    word-break: break-all;
+}
+
+.content-top .user {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.content-top .user .avatar {
+    font-size: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.content-top .user .info b {
+    font-weight: 500;
+}
+
+.content-top .user .info ion-icon {
+    color: aquamarine;
+}
+
+p {
+    color: gray;
+}
+
+.content-bottom {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.content-bottom button {
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 25px;
+    color: white;
+}
+
+.content-bottom button ion-icon {
+    margin-right: 8px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 876px) {
+    div.thumbnail {
+        width: calc(50% - 22px);
+        /* flex-wrap: wrap; */
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    div.thumbnail {
+        width: calc(100% - 42px);
+    }
+}
